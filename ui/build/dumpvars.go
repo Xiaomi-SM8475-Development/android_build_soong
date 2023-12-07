@@ -178,13 +178,33 @@ var BannerVars = []string{
 func Banner(make_vars map[string]string) string {
 	b := &bytes.Buffer{}
 
-	fmt.Fprintln(b, "============================================")
-	for _, name := range BannerVars {
-		if make_vars[name] != "" {
-			fmt.Fprintf(b, "%s=%s\n", name, make_vars[name])
-		}
-	}
-	fmt.Fprint(b, "============================================")
+		fmt.Fprintln(b, "============================================================")
+		fmt.Fprintln(b, "                                                            ")        
+		fmt.Fprintln(b, "  ███╗░░░███╗░█████╗░████████╗██████╗░██╗██╗░░██╗██╗░░██╗   ")
+		fmt.Fprintln(b, "  ████╗░████║██╔══██╗╚══██╔══╝██╔══██╗██║╚██╗██╔╝╚██╗██╔╝   ")
+		fmt.Fprintln(b, "  ██╔████╔██║███████║░░░██║░░░██████╔╝██║░╚███╔╝░░╚███╔╝░   ")
+		fmt.Fprintln(b, "  ██║╚██╔╝██║██╔══██║░░░██║░░░██╔══██╗██║░██╔██╗░░██╔██╗░   ")
+		fmt.Fprintln(b, "  ██║░╚═╝░██║██║░░██║░░░██║░░░██║░░██║██║██╔╝╚██╗██╔╝╚██╗   ")
+		fmt.Fprintln(b, "  ╚═╝░░░░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝╚═╝░░╚═╝╚═╝░░╚═╝   ")
+		fmt.Fprintln(b, "============================================================")
+		fmt.Fprintln(b, "        Project-Matrixx by Team-Matrixx                     ")
+		fmt.Fprintln(b, "============================================================")
+		fmt.Fprintf(b, "%s=%s\n", "MATRIXX_BUILD_INFO", make_vars["MATRIXX_BUILD_INFO"])
+		fmt.Fprintf(b, "%s=%s\n", "MATRIXX_MAINTAINER", make_vars["MATRIXX_MAINTAINER"])		
+		fmt.Fprintf(b, "%s=%s\n", "PLATFORM_VERSION", make_vars["PLATFORM_VERSION"])
+		fmt.Fprintf(b, "%s=%s\n", "PRODUCT_INCLUDE_TAGS", make_vars["PRODUCT_INCLUDE_TAGS"])
+		fmt.Fprintf(b, "%s=%s\n", "TARGET_DEVICE", make_vars["TARGET_DEVICE"])
+		fmt.Fprintf(b, "%s=%s\n", "TARGET_BUILD_VARIANT", make_vars["TARGET_BUILD_VARIANT"])
+		fmt.Fprintf(b, "%s=%s\n", "PRODUCT_INCLUDE_TAGS", make_vars["PRODUCT_INCLUDE_TAGS"])		
+		fmt.Fprintf(b, "%s=%s\n", "TARGET_ARCH", make_vars["TARGET_ARCH"])
+		fmt.Fprintf(b, "%s=%s\n", "TARGET_ARCH_VARIANT", make_vars["TARGET_ARCH_VARIANT"])
+		fmt.Fprintf(b, "%s=%s\n", "TARGET_TARGET_CPU_VARIANT", make_vars["TARGET_CPU_VARIANT"])		
+		fmt.Fprintf(b, "%s=%s\n", "TARGET_2ND_ARCH", make_vars["TARGET_2ND_ARCH"])
+		fmt.Fprintf(b, "%s=%s\n", "TARGET_2ND_ARCH_VARIANT", make_vars["TARGET_2ND_ARCH_VARIANT"])
+		fmt.Fprintf(b, "%s=%s\n", "TARGET_2ND_CPU_VARIANT", make_vars["TARGET_2ND_CPU_VARIANT"])
+		fmt.Fprintf(b, "%s=%s\n", "BUILD_ID", make_vars["BUILD_ID"])
+		fmt.Fprintf(b, "%s=%s\n", "OUT_DIR", make_vars["OUT_DIR"])
+		fmt.Fprintln(b, "===============================================================")
 
 	return b.String()
 }
